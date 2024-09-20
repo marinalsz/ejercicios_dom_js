@@ -1,29 +1,56 @@
-/* 2.1 Inserta dinamicamente en un html un div vacio con javascript. */
+//2.1
+const nuevoDiv = document.createElement("div");
+document.body.appendChild(nuevoDiv);
 
-const div = document.createElement("div");
-console.log(div);
+//2.2
+const newDiv = document.createElement("div");
+const nuevoParrafo = document.createElement("p");
+newDiv.appendChild(nuevoParrafo);
+document.body.appendChild(newDiv);
 
-/* 2.2 Inserta dinamicamente en un html un div que contenga una p con javascript. */
+//2.3
+const newDivisor = document.createElement("div");
+for (let i = 0; i < 6; i++) {
+  const nuevoP = document.createElement("p");
+  newDivisor.appendChild(nuevoP);
+}
+document.body.appendChild(newDivisor);
 
-const div2 = document.createElement("div");
-console.log(div2);
+//2.4
+const p = document.createElement("p");
+p.textContent = "Soy dinámico!";
+document.body.appendChild(p);
 
-/* 2.3 Inserta dinamicamente en un html un div que contenga 6 p utilizando un 
-	loop con javascript. */
+//2.5
+const h2 = document.querySelector(".fn-insert-here");
+h2.textContent = "Wubba Lubba dub dub";
 
-/* 2.4 Inserta dinamicamente con javascript en un html una p con el 
-	texto 'Soy dinámico!'. */
+//2.6
+const apps = ["Facebook", "Netflix", "Instagram", "Snapchat", "Twitter"];
+const ul = document.createElement("ul");
+for (const app of apps) {
+  const li = document.createElement("li");
+  li.textContent = app;
+  ul.appendChild(li);
+}
+document.body.appendChild(ul);
 
-/* 2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'. */
+//2.7
+const removedElements = document.querySelectorAll(".fn-remove-me");
+for (const element of removedElements) {
+  element.remove();
+}
 
-/* 2.6 Basandote en el siguiente array crea una lista ul > li con 
-los textos del array.
-const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter']; */
+//2.8
+const newP = document.createElement("p");
+newP.textContent = "Voy en medio!";
+const divisor = document.querySelector("div.fn-insert-here");
+divisor.insertAdjacentElement("afterend", newP);
 
-/* 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me */
-
-/* 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. 
-	Recuerda que no solo puedes insertar elementos con .appendChild. */
-
-/* 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase 
-	.fn-insert-here  */
+//2.9
+const divs = document.querySelectorAll("div.fn-insert-here");
+for (const div of divs) {
+  const insideP = document.createElement("p");
+  insideP.textContent = "Voy dentro!";
+  div.appendChild(insideP);
+}
