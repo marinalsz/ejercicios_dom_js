@@ -49,6 +49,7 @@ for (const foto of fotos) {
 const button = document.createElement("button");
 button.textContent = "Eliminar último elemento";
 const divisor = document.querySelectorAll(".otra")
+console.log(divisor);
 
 button.addEventListener('click', () => {
     const lastDiv = divisor.lastElementChild;
