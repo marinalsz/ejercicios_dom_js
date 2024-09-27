@@ -1,16 +1,43 @@
 //4.1
+
 const btnToClick = document.getElementById("btnToClick");
-btnToClick.addEventListener("click", function (event) {
-  console.log("Evento de click:", event);
+
+btnToClick.addEventListener("click", (event) => {
+  console.log(event);
 });
 
 //4.2
-const textInput = document.querySelector("input");
-textInput.addEventListener('focus', function() {
-    console.log('Input en foco, valor actual:', textInput.value); 
+
+const focusInput = document.querySelector(".focus");
+
+focusInput.addEventListener("focus", () => {
+  console.log(focusInput.value);
 });
 
 //4.3
-textInput.addEventListener('input', function() {
-    console.log('Valor actual del input:', textInput.value);
+
+const valueInput = document.querySelector(".value");
+
+valueInput.addEventListener("input", () => {
+  console.log(valueInput.value);
 });
+
+//4.4
+
+const albums = [
+  "De Mysteriis Dom Sathanas",
+  "Reign of Blood",
+  "Ride the Lightning",
+  "Painkiller",
+  "Iron Fist",
+];
+
+const ul = document.createElement("ul");
+
+for (const album of albums) {
+  const li = document.createElement("li");
+  li.textContent = album;
+  ul.appendChild(li);
+}
+
+document.body.appendChild(ul);
