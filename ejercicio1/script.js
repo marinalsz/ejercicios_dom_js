@@ -25,5 +25,5 @@ console.log(testMe);
 
 //1.6
 
-const testMeThird = document.querySelectorAll('[data-function="testMe"]');
-console.log(testMeThird[2]);
+const testMeTres = document.querySelectorAll('[data-function="testMe"]') [2];
+console.log(testMeTres);
